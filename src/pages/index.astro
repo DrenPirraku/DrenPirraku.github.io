@@ -1,16 +1,199 @@
 ---
-
+const pageTitle = "easypathVienna - Intelligente Fahrradrouten für Wien";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Dreni Bo$$i</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content="easypathVienna bietet intelligente Fahrradrouten-Planung für Wien mit Berücksichtigung von Steigungen und individuellen Präferenzen.">
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="/" aria-label="easypathVienna Startseite">
+                        <span class="logo-text">easypathVienna</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <h1 id="hero-heading">Entdecke Wien mit intelligenten Fahrradrouten</h1>
+                <p class="hero-subtitle">easypathVienna analysiert Steigungen, Verkehr und Ihre Präferenzen für die perfekte Route durch Wien.</p>
+                <div class="hero-cta">
+                    <a href="/shop" class="btn btn-primary">Jetzt Premium holen</a>
+                    <a href="#features" class="btn btn-secondary">Mehr erfahren</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features" aria-labelledby="features-heading">
+            <div class="container">
+                <div class="image-showcase" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="showcase-image">
+                        <img 
+                            src="/images/route-planning.jpg" 
+                            alt="Fahrradfahrer plant Route auf Smartphone mit easypathVienna App, zeigt Steigungsanalyse auf Wien-Karte"
+                            style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
+                        >
+                        <p style="margin-top: 0.5rem; text-align: center; color: var(--text-light); font-size: 0.875rem;">
+                            Intelligente Routenplanung mit Steigungsanalyse
+                        </p>
+                    </div>
+                    <div class="showcase-image">
+                        <img 
+                            src="/images/cycling-vienna.jpg" 
+                            alt="Radfahrer fährt durch Wien auf Radweg mit Stadtpanorama im Hintergrund"
+                            style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"
+                        >
+                        <p style="margin-top: 0.5rem; text-align: center; color: var(--text-light); font-size: 0.875rem;">
+                            Entdecke die schönsten Routen durch Wien
+                        </p>
+                    </div>
+                </div>
+                <h2 id="features-heading">Unsere Funktionen</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📊</div>
+                        <h3>Steigungsanalyse</h3>
+                        <p>Detaillierte Höhenprofile zeigen Ihnen genau, wo es bergauf oder bergab geht. Planen Sie Ihre Route nach Ihrer Fitness.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🗺️</div>
+                        <h3>Interaktive Karten</h3>
+                        <p>Hochauflösende Karten von Wien mit Radwegen, Verkehrsinformationen und Points of Interest.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">⚙️</div>
+                        <h3>Personalisierung</h3>
+                        <p>Bevorzugen Sie flache Routen, Radwege oder die schnellste Verbindung? Sie entscheiden.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3>Offline-Modus</h3>
+                        <p>Laden Sie Karten herunter und nutzen Sie easypathVienna auch ohne Internetverbindung.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🌤️</div>
+                        <h3>Wetterintegration</h3>
+                        <p>Aktuelle Wetterinformationen helfen Ihnen, die beste Zeit für Ihre Fahrt zu wählen.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📈</div>
+                        <h3>Statistiken</h3>
+                        <p>Verfolgen Sie Ihre Fahrten, zurückgelegte Strecken und überwundene Höhenmeter.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" aria-labelledby="pricing-heading">
+            <div class="container">
+                <h2 id="pricing-heading">Unsere Preismodelle</h2>
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h3>Free</h3>
+                        <p class="price"><span class="amount">0€</span></p>
+                        <ul class="features-list">
+                            <li>Basis-Routenplanung</li>
+                            <li>Steigungsanzeige</li>
+                            <li>Bis zu 5 Routen pro Tag</li>
+                            <li>Werbefinanziert</li>
+                        </ul>
+                        <a href="/shop" class="btn btn-outline">Kostenlos starten</a>
+                    </article>
+                    <article class="pricing-card featured">
+                        <div class="badge">Beliebt</div>
+                        <h3>Premium</h3>
+                        <p class="price"><span class="amount">4,99€</span> / Monat</p>
+                        <ul class="features-list">
+                            <li>Unbegrenzte Routenplanung</li>
+                            <li>Erweiterte Steigungsanalyse</li>
+                            <li>Offline-Karten</li>
+                            <li>Keine Werbung</li>
+                            <li>Wetterintegration</li>
+                            <li>Detaillierte Statistiken</li>
+                        </ul>
+                        <a href="/shop" class="btn btn-primary">Premium kaufen</a>
+                    </article>
+                    <article class="pricing-card">
+                        <h3>Pro</h3>
+                        <p class="price"><span class="amount">9,99€</span> / Monat</p>
+                        <ul class="features-list">
+                            <li>Alle Premium-Funktionen</li>
+                            <li>Routenexport (GPX, KML)</li>
+                            <li>API-Zugriff</li>
+                            <li>Prioritäts-Support</li>
+                            <li>Firmen-Lizenzen verfügbar</li>
+                        </ul>
+                        <a href="/shop" class="btn btn-outline">Pro kaufen</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading">Bereit für Ihre nächste Radtour?</h2>
+                <p>Starten Sie noch heute mit easypathVienna und entdecken Sie Wien auf zwei Rädern.</p>
+                <a href="/shop" class="btn btn-primary btn-large">Jetzt loslegen</a>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>easypathVienna</h3>
+                <p>Intelligente Fahrradrouten für Wien</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rechtliches</h3>
+                <ul>
+                    <li><a href="/impressum">Impressum</a></li>
+                    <li><a href="/datenschutz">Datenschutz</a></li>
+                    <li><a href="/barrierefreiheit">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="/contact">Kontaktformular</a></li>
+                    <li><a href="mailto:info@easypathvienna.at">info@easypathvienna.at</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 easypathVienna GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

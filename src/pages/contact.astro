@@ -1,0 +1,316 @@
+---
+const pageTitle = "Kontakt - easypathVienna";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content="Kontaktieren Sie easypathVienna - Wir sind für Sie da!">
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="/" aria-label="easypathVienna Startseite">
+                        <span class="logo-text">easypathVienna</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                    <li><a href="/contact" aria-current="page">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="content-page">
+        <h1>Kontakt</h1>
+        
+        <p>Wir freuen uns auf Ihre Nachricht! Ob Sie Fragen, Feedback oder Unterstützung benötigen – unser Team ist für Sie da.</p>
+
+        <section aria-labelledby="contact-info-heading">
+            <h2 id="contact-info-heading">Kontaktinformationen</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <article>
+                    <h3>Adresse</h3>
+                    <p>
+                        easypathVienna GmbH<br>
+                        Mariahilfer Straße 123<br>
+                        1060 Wien<br>
+                        Österreich
+                    </p>
+                </article>
+                
+                <article>
+                    <h3>Telefon & E-Mail</h3>
+                    <p>
+                        <strong>Tel:</strong> <a href="tel:+4312345678">+43 1 234 5678</a><br>
+                        <strong>E-Mail:</strong> <a href="mailto:info@easypathvienna.at">info@easypathvienna.at</a>
+                    </p>
+                </article>
+                
+                <article>
+                    <h3>Öffnungszeiten</h3>
+                    <p>
+                        Montag – Freitag: 9:00 – 17:00 Uhr<br>
+                        Samstag & Sonntag: Geschlossen
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="support-heading">
+            <h2 id="support-heading">Support & Anfragen</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <article>
+                    <h3>Allgemeine Anfragen</h3>
+                    <p><a href="mailto:info@easypathvienna.at">info@easypathvienna.at</a></p>
+                    <p>Für allgemeine Fragen zu easypathVienna und unseren Produkten.</p>
+                </article>
+                
+                <article>
+                    <h3>Technischer Support</h3>
+                    <p><a href="mailto:support@easypathvienna.at">support@easypathvienna.at</a></p>
+                    <p>Hilfe bei technischen Problemen, Bugs oder App-Fragen.</p>
+                </article>
+                
+                <article>
+                    <h3>Verkauf & Lizenzen</h3>
+                    <p><a href="mailto:sales@easypathvienna.at">sales@easypathvienna.at</a></p>
+                    <p>Fragen zu Abonnements, Rechnungen oder Enterprise-Lizenzen.</p>
+                </article>
+                
+                <article>
+                    <h3>Datenschutz</h3>
+                    <p><a href="mailto:datenschutz@easypathvienna.at">datenschutz@easypathvienna.at</a></p>
+                    <p>Anfragen zum Datenschutz und DSGVO-Auskunftsersuchen.</p>
+                </article>
+                
+                <article>
+                    <h3>Rechtliches</h3>
+                    <p><a href="mailto:legal@easypathvienna.at">legal@easypathvienna.at</a></p>
+                    <p>Rechtliche Anfragen, Lizenzfragen und Verträge.</p>
+                </article>
+                
+                <article>
+                    <h3>Presse</h3>
+                    <p><a href="mailto:presse@easypathvienna.at">presse@easypathvienna.at</a></p>
+                    <p>Presseanfragen und Medieninformationen.</p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Kontaktformular</h2>
+            <p>Füllen Sie das folgende Formular aus, und wir werden uns schnellstmöglich bei Ihnen melden.</p>
+            
+            <form action="/api/contact" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name <span aria-label="erforderlich">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        aria-required="true"
+                        autocomplete="name"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-Mail-Adresse <span aria-label="erforderlich">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        aria-required="true"
+                        autocomplete="email"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Betreff <span aria-label="erforderlich">*</span></label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        required 
+                        aria-required="true"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Kategorie</label>
+                    <select id="category" name="category">
+                        <option value="">Bitte wählen...</option>
+                        <option value="general">Allgemeine Anfrage</option>
+                        <option value="support">Technischer Support</option>
+                        <option value="sales">Verkauf & Lizenzen</option>
+                        <option value="privacy">Datenschutz</option>
+                        <option value="legal">Rechtliches</option>
+                        <option value="press">Presse</option>
+                        <option value="feedback">Feedback & Vorschläge</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Ihre Nachricht <span aria-label="erforderlich">*</span></label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        required 
+                        aria-required="true"
+                        rows="6"
+                    ></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="privacy" required aria-required="true">
+                        Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. <span aria-label="erforderlich">*</span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="newsletter">
+                        Ich möchte den easypathVienna Newsletter erhalten (optional, jederzeit abbestellbar)
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Nachricht senden</button>
+                
+                <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light);">
+                    <span aria-label="erforderlich">*</span> Pflichtfelder
+                </p>
+            </form>
+            
+            <div id="form-success" style="display: none; background: var(--success-color); color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;" role="alert">
+                <p><strong>Vielen Dank!</strong> Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.</p>
+            </div>
+            
+            <div id="form-error" style="display: none; background: var(--error-color); color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;" role="alert">
+                <p><strong>Fehler:</strong> Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="location-heading">
+            <h2 id="location-heading">So finden Sie uns</h2>
+            <p>Unser Büro befindet sich im Herzen von Wien, direkt an der Mariahilfer Straße. Gut erreichbar mit öffentlichen Verkehrsmitteln und natürlich mit dem Fahrrad!</p>
+            
+            <h3>Öffentliche Verkehrsmittel</h3>
+            <ul>
+                <li><strong>U-Bahn:</strong> U3 Station Neubaugasse (3 Minuten zu Fuß)</li>
+                <li><strong>Straßenbahn:</strong> Linien 49, 13A (Haltestelle Mariahilfer Straße)</li>
+                <li><strong>Bus:</strong> 13A, 14A</li>
+            </ul>
+            
+            <h3>Mit dem Fahrrad</h3>
+            <p>Fahrradstellplätze sind direkt vor dem Gebäude vorhanden. Nutzen Sie gerne unsere easypathVienna App, um die beste Route zu uns zu finden!</p>
+        </section>
+
+        <section aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Häufig gestellte Fragen</h2>
+            <p>Bevor Sie uns kontaktieren, werfen Sie einen Blick in unsere häufig gestellten Fragen:</p>
+            
+            <article>
+                <h3>Wie schnell erhalte ich eine Antwort?</h3>
+                <p>Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten (an Werktagen). Premium- und Pro-Kunden erhalten bevorzugten Support.</p>
+            </article>
+            
+            <article>
+                <h3>Ich habe mein Passwort vergessen</h3>
+                <p>Nutzen Sie die "Passwort vergessen"-Funktion in der App oder auf unserer Website. Sie erhalten dann einen Link zum Zurücksetzen per E-Mail.</p>
+            </article>
+            
+            <article>
+                <h3>Wie kann ich mein Abonnement kündigen?</h3>
+                <p>Sie können Ihr Abonnement jederzeit in Ihrem Account unter "Einstellungen" → "Abonnement" kündigen. Es läuft dann zum Ende der bezahlten Periode aus.</p>
+            </article>
+            
+            <article>
+                <h3>Bieten Sie Firmenlizenzen an?</h3>
+                <p>Ja! Kontaktieren Sie uns unter <a href="mailto:sales@easypathvienna.at">sales@easypathvienna.at</a> für individuelle Angebote für Teams und Unternehmen.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>easypathVienna</h3>
+                <p>Intelligente Fahrradrouten für Wien</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rechtliches</h3>
+                <ul>
+                    <li><a href="/impressum">Impressum</a></li>
+                    <li><a href="/datenschutz">Datenschutz</a></li>
+                    <li><a href="/barrierefreiheit">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="/contact" aria-current="page">Kontaktformular</a></li>
+                    <li><a href="mailto:info@easypathvienna.at">info@easypathvienna.at</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 easypathVienna GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mock form submission (since this is a static site)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const successMsg = document.getElementById('form-success');
+            const errorMsg = document.getElementById('form-error');
+            
+            // Hide any previous messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            // Simulate a delay
+            setTimeout(() => {
+                // In a real implementation, this would send data to a server
+                // For now, we'll just show a success message
+                successMsg.style.display = 'block';
+                
+                // Reset form
+                document.getElementById('contact-form').reset();
+                
+                // Scroll to success message
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+---
+const pageTitle = "Shop - easypathVienna Premium kaufen";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content="Holen Sie sich easypathVienna Premium oder Pro und nutzen Sie alle Funktionen für intelligente Fahrradrouten in Wien.">
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="/" aria-label="easypathVienna Startseite">
+                        <span class="logo-text">easypathVienna</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop" aria-current="page">Shop</a></li>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" style="padding: 3rem 1.5rem;">
+            <div class="container">
+                <h1>Wählen Sie Ihr easypathVienna Paket</h1>
+                <p class="hero-subtitle">Starten Sie kostenlos oder holen Sie sich Premium-Features für das beste Fahrraderlebnis in Wien.</p>
+            </div>
+        </section>
+
+        <section class="pricing" style="padding: 3rem 1.5rem;">
+            <div class="container">
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h2>Free</h2>
+                        <p class="price"><span class="amount">0€</span></p>
+                        <p style="margin-bottom: 1.5rem;">Perfekt zum Ausprobieren</p>
+                        
+                        <ul class="features-list">
+                            <li>Basis-Routenplanung</li>
+                            <li>Steigungsanzeige</li>
+                            <li>Bis zu 5 Routen pro Tag</li>
+                            <li>Interaktive Karten</li>
+                            <li>Community-Features</li>
+                        </ul>
+                        
+                        <p style="margin: 1rem 0; color: var(--text-light); font-size: 0.875rem;">Einschränkungen:</p>
+                        <ul class="features-list" style="color: var(--text-light);">
+                            <li>Werbefinanziert</li>
+                            <li>Keine Offline-Karten</li>
+                            <li>Eingeschränkte Statistiken</li>
+                        </ul>
+                        
+                        <button class="btn btn-outline" style="width: 100%; margin-top: 1.5rem;" onclick="selectPlan('free')">
+                            Kostenlos starten
+                        </button>
+                    </article>
+
+                    <article class="pricing-card featured">
+                        <div class="badge">Beliebt</div>
+                        <h2>Premium</h2>
+                        <div style="margin: 1rem 0;">
+                            <p class="price"><span class="amount">4,99€</span> / Monat</p>
+                            <p style="margin-top: 0.5rem;">oder <strong>49,99€ / Jahr</strong> (2 Monate gratis)</p>
+                        </div>
+                        <p style="margin-bottom: 1.5rem;">Für regelmäßige Radfahrer</p>
+                        
+                        <ul class="features-list">
+                            <li><strong>Alles aus Free, plus:</strong></li>
+                            <li>Unbegrenzte Routenplanung</li>
+                            <li>Erweiterte Steigungsanalyse</li>
+                            <li>Offline-Karten für ganz Wien</li>
+                            <li>Keine Werbung</li>
+                            <li>Wetterintegration</li>
+                            <li>Detaillierte Statistiken</li>
+                            <li>Persönliche Favoriten</li>
+                            <li>Routenhistorie</li>
+                            <li>Multi-Device (3 Geräte)</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <button class="btn btn-primary" style="width: 100%; margin-bottom: 0.5rem;" onclick="selectPlan('premium-monthly')">
+                                Monatlich kaufen (4,99€)
+                            </button>
+                            <button class="btn btn-secondary" style="width: 100%;" onclick="selectPlan('premium-yearly')">
+                                Jährlich kaufen (49,99€)
+                            </button>
+                        </div>
+                        
+                        <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light);">
+                            Jederzeit kündbar. Keine versteckten Kosten.
+                        </p>
+                    </article>
+
+                    <article class="pricing-card">
+                        <h2>Pro</h2>
+                        <div style="margin: 1rem 0;">
+                            <p class="price"><span class="amount">9,99€</span> / Monat</p>
+                            <p style="margin-top: 0.5rem;">oder <strong>99,99€ / Jahr</strong> (2 Monate gratis)</p>
+                        </div>
+                        <p style="margin-bottom: 1.5rem;">Für Power-User & Teams</p>
+                        
+                        <ul class="features-list">
+                            <li><strong>Alles aus Premium, plus:</strong></li>
+                            <li>Routenexport (GPX, KML)</li>
+                            <li>API-Zugriff (10.000 Anfragen/Monat)</li>
+                            <li>Prioritäts-Support</li>
+                            <li>Multi-Device (5 Geräte)</li>
+                            <li>Team-Lizenzen (bis 10 Personen)</li>
+                            <li>Erweiterte Analytics</li>
+                            <li>Beta-Feature-Zugang</li>
+                            <li>Dedizierter Account-Manager</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <button class="btn btn-outline" style="width: 100%; margin-bottom: 0.5rem;" onclick="selectPlan('pro-monthly')">
+                                Monatlich kaufen (9,99€)
+                            </button>
+                            <button class="btn btn-outline" style="width: 100%;" onclick="selectPlan('pro-yearly')">
+                                Jährlich kaufen (99,99€)
+                            </button>
+                        </div>
+                        
+                        <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light);">
+                            Enterprise-Lizenzen? <a href="/contact">Kontaktieren Sie uns</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: var(--background-alt); padding: 3rem 1.5rem;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Häufig gestellte Fragen</h2>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Wie funktioniert die kostenlose Version?</h3>
+                        <p>Die Free-Version bietet alle Grundfunktionen von easypathVienna. Sie können bis zu 5 Routen pro Tag planen und erhalten Steigungsanalysen. Die Finanzierung erfolgt durch Werbung.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Kann ich jederzeit upgraden?</h3>
+                        <p>Ja! Sie können jederzeit von Free zu Premium oder Pro upgraden. Bereits gespeicherte Routen und Statistiken bleiben erhalten.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Wie funktioniert die Abrechnung?</h3>
+                        <p>Bei monatlicher Zahlung wird Ihr Abonnement jeden Monat automatisch verlängert. Bei jährlicher Zahlung einmal pro Jahr. Sie können jederzeit kündigen und Ihr Abonnement läuft bis zum Ende der bezahlten Periode.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Welche Zahlungsmethoden werden akzeptiert?</h3>
+                        <p>Wir akzeptieren Kreditkarten (Visa, Mastercard, American Express), Debitkarten und PayPal. Die Zahlung wird sicher über unsere Partner Stripe und PayPal abgewickelt.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Kann ich mein Abonnement kündigen?</h3>
+                        <p>Ja, Sie können Ihr Abonnement jederzeit in Ihrem Account unter "Einstellungen" → "Abonnement" kündigen. Ihr Zugang zu Premium-Features bleibt bis zum Ende der bezahlten Periode bestehen.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Gibt es eine Geld-zurück-Garantie?</h3>
+                        <p>Ja! Wenn Sie mit easypathVienna Premium oder Pro nicht zufrieden sind, erstatten wir Ihnen innerhalb von 14 Tagen nach dem Kauf den vollen Betrag.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Funktionieren Offline-Karten wirklich offline?</h3>
+                        <p>Ja! Nach dem Download der Kartendaten können Sie diese vollständig offline nutzen. Nur für Live-Wetterdaten und Verkehrsinformationen wird eine Internetverbindung benötigt.</p>
+                    </article>
+
+                    <article style="margin-bottom: 2rem;">
+                        <h3>Was passiert mit meinen Daten, wenn ich kündige?</h3>
+                        <p>Ihre persönlichen Routen und Statistiken bleiben 3 Jahre lang gespeichert. Falls Sie später zurückkommen, sind Ihre Daten noch da. Sie können Ihre Daten jederzeit vollständig löschen.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 3rem 1.5rem;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Feature-Vergleich</h2>
+                
+                <div style="overflow-x: auto;">
+                    <table style="min-width: 600px;">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th style="text-align: center;">Free</th>
+                                <th style="text-align: center; background: var(--primary-light); color: white;">Premium</th>
+                                <th style="text-align: center;">Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Routenplanung</td>
+                                <td style="text-align: center;">5/Tag</td>
+                                <td style="text-align: center;">Unbegrenzt</td>
+                                <td style="text-align: center;">Unbegrenzt</td>
+                            </tr>
+                            <tr>
+                                <td>Steigungsanalyse</td>
+                                <td style="text-align: center;">✓</td>
+                                <td style="text-align: center;">✓ Erweitert</td>
+                                <td style="text-align: center;">✓ Erweitert</td>
+                            </tr>
+                            <tr>
+                                <td>Offline-Karten</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✓</td>
+                                <td style="text-align: center;">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Werbefrei</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✓</td>
+                                <td style="text-align: center;">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Wetterintegration</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✓</td>
+                                <td style="text-align: center;">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Detaillierte Statistiken</td>
+                                <td style="text-align: center;">Basis</td>
+                                <td style="text-align: center;">✓</td>
+                                <td style="text-align: center;">✓ Erweitert</td>
+                            </tr>
+                            <tr>
+                                <td>Routenexport</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✓</td>
+                            </tr>
+                            <tr>
+                                <td>API-Zugriff</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✗</td>
+                                <td style="text-align: center;">✓</td>
+                            </tr>
+                            <tr>
+                                <td>Geräte gleichzeitig</td>
+                                <td style="text-align: center;">1</td>
+                                <td style="text-align: center;">3</td>
+                                <td style="text-align: center;">5</td>
+                            </tr>
+                            <tr>
+                                <td>Support</td>
+                                <td style="text-align: center;">Community</td>
+                                <td style="text-align: center;">E-Mail</td>
+                                <td style="text-align: center;">Priorität</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container" style="text-align: center;">
+                <h2>Noch nicht sicher?</h2>
+                <p style="margin-bottom: 2rem;">Starten Sie kostenlos und upgraden Sie jederzeit, wenn Sie bereit sind.</p>
+                <button class="btn btn-primary btn-large" onclick="selectPlan('free')">
+                    Jetzt kostenlos starten
+                </button>
+                <p style="margin-top: 1rem; font-size: 0.875rem;">
+                    Haben Sie Fragen? <a href="/contact" style="color: white; text-decoration: underline;">Kontaktieren Sie uns</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>easypathVienna</h3>
+                <p>Intelligente Fahrradrouten für Wien</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rechtliches</h3>
+                <ul>
+                    <li><a href="/impressum">Impressum</a></li>
+                    <li><a href="/datenschutz">Datenschutz</a></li>
+                    <li><a href="/barrierefreiheit">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="/contact">Kontaktformular</a></li>
+                    <li><a href="mailto:info@easypathvienna.at">info@easypathvienna.at</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 easypathVienna GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function selectPlan(plan) {
+            // Mock checkout process
+            alert(`Sie haben "${plan}" gewählt.\n\nIn einer vollständigen Implementierung würden Sie jetzt zur Checkout-Seite weitergeleitet werden.\n\nHinweis: Dies ist eine Demo-Website für ein Universitätsprojekt.`);
+            
+            // In a real implementation, this would redirect to a payment page
+            // window.location.href = `/checkout?plan=${plan}`;
+        }
+    </script>
+</body>
+</html>

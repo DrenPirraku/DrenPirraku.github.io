@@ -1,0 +1,299 @@
+---
+const pageTitle = "Barrierefreiheitserklärung - easypathVienna";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content="Barrierefreiheitserklärung der easypathVienna Website gemäß WCAG 2.2 AA.">
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    
+    <header role="banner">
+        <nav aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="/" aria-label="easypathVienna Startseite">
+                        <span class="logo-text">easypathVienna</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="content-page">
+        <h1>Barrierefreiheitserklärung</h1>
+        
+        <p><strong>Stand:</strong> Januar 2026</p>
+        
+        <p>Die easypathVienna GmbH ist bestrebt, ihre Website easypathvienna.at im Einklang mit den relevanten nationalen Rechtsvorschriften zur Barrierefreiheit barrierefrei zugänglich zu machen.</p>
+
+        <section aria-labelledby="commitment-heading">
+            <h2 id="commitment-heading">1. Unser Engagement für Barrierefreiheit</h2>
+            <p>easypathVienna verpflichtet sich, die Zugänglichkeit unserer Website für alle Menschen sicherzustellen, einschließlich Menschen mit Behinderungen. Wir arbeiten kontinuierlich daran, die Barrierefreiheit und Benutzerfreundlichkeit unserer Website zu verbessern und dabei die relevanten Standards einzuhalten.</p>
+        </section>
+
+        <section aria-labelledby="standards-heading">
+            <h2 id="standards-heading">2. Konformitätsstandard</h2>
+            <p>Diese Website ist konform mit den <strong>Web Content Accessibility Guidelines (WCAG) 2.2</strong> auf dem Konformitätsniveau <strong>AA</strong>. Die WCAG 2.2 AA umfasst drei Konformitätsstufen (A, AA, AAA), wobei AA der von der Europäischen Union empfohlene Standard ist.</p>
+            
+            <h3>Was bedeutet WCAG 2.2 Level AA?</h3>
+            <p>Die WCAG 2.2 Level AA Richtlinien basieren auf vier Grundprinzipien:</p>
+            <ul>
+                <li><strong>Wahrnehmbar:</strong> Informationen und Benutzeroberflächen müssen so dargestellt werden, dass Benutzer sie wahrnehmen können.</li>
+                <li><strong>Bedienbar:</strong> Benutzeroberflächen und Navigation müssen bedienbar sein.</li>
+                <li><strong>Verständlich:</strong> Informationen und die Bedienung der Benutzeroberfläche müssen verständlich sein.</li>
+                <li><strong>Robust:</strong> Inhalte müssen robust genug sein, damit sie von verschiedenen Benutzeragenten, einschließlich assistiver Technologien, interpretiert werden können.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="measures-heading">
+            <h2 id="measures-heading">3. Implementierte Barrierefreiheitsmaßnahmen</h2>
+            
+            <h3>3.1 Strukturelle Maßnahmen</h3>
+            <ul>
+                <li><strong>Semantisches HTML:</strong> Verwendung korrekter HTML5-Elemente (header, nav, main, footer, article, section) für eine logische Dokumentstruktur</li>
+                <li><strong>Überschriftenhierarchie:</strong> Konsistente und hierarchische Verwendung von Überschriften (h1-h6)</li>
+                <li><strong>Skip-Links:</strong> "Zum Hauptinhalt springen"-Link am Anfang jeder Seite für Tastaturnutzer</li>
+                <li><strong>Landmark-Regions:</strong> ARIA-Landmark-Rollen für einfachere Navigation mit Screenreadern</li>
+            </ul>
+
+            <h3>3.2 Visuelle Gestaltung</h3>
+            <ul>
+                <li><strong>Farbkontrast:</strong> Alle Text-Hintergrund-Kombinationen erfüllen mindestens WCAG AA Kontrastverhältnis (4.5:1 für normalen Text, 3:1 für großen Text)</li>
+                <li><strong>Keine Informationsvermittlung nur durch Farbe:</strong> Informationen werden nicht ausschließlich durch Farbe vermittelt</li>
+                <li><strong>Responsive Design:</strong> Die Website passt sich verschiedenen Bildschirmgrößen an und ist auf 200% Vergrößerung getestet</li>
+                <li><strong>Fokus-Indikatoren:</strong> Deutlich sichtbare Fokus-Indikatoren für alle interaktiven Elemente</li>
+                <li><strong>Konsistente Gestaltung:</strong> Einheitliches Design und Layout über alle Seiten hinweg</li>
+            </ul>
+
+            <h3>3.3 Navigation und Interaktion</h3>
+            <ul>
+                <li><strong>Tastaturnavigation:</strong> Alle Funktionen sind ausschließlich mit der Tastatur zugänglich</li>
+                <li><strong>Logische Tab-Reihenfolge:</strong> Natürliche und intuitive Reihenfolge beim Navigieren mit der Tab-Taste</li>
+                <li><strong>Sichtbare Linktexte:</strong> Beschreibende Linktexte, die auch außerhalb des Kontexts verständlich sind</li>
+                <li><strong>Keine Tastatur-Fallen:</strong> Benutzer können nicht in einem Bereich "gefangen" werden</li>
+                <li><strong>Ausreichende Klickbereiche:</strong> Interaktive Elemente haben eine Mindestgröße für einfache Bedienung</li>
+            </ul>
+
+            <h3>3.4 Inhalte und Medien</h3>
+            <ul>
+                <li><strong>Alternativtexte:</strong> Alle informativen Bilder haben beschreibende Alt-Texte</li>
+                <li><strong>Dekorative Bilder:</strong> Dekorative Elemente sind mit aria-hidden="true" oder leerem Alt-Attribut markiert</li>
+                <li><strong>Formulare:</strong> Alle Formularfelder haben zugeordnete Labels und klare Fehlermeldungen</li>
+                <li><strong>Sprache:</strong> Hauptsprache der Seite (Deutsch) ist korrekt deklariert</li>
+                <li><strong>Verständliche Sprache:</strong> Klare, einfache Sprache ohne unnötigen Fachjargon</li>
+            </ul>
+
+            <h3>3.5 Technische Barrierefreiheit</h3>
+            <ul>
+                <li><strong>ARIA-Attribute:</strong> Korrekte Verwendung von ARIA-Labels und -Beschreibungen wo notwendig</li>
+                <li><strong>Screenreader-Kompatibilität:</strong> Getestet mit gängigen Screenreadern (NVDA, JAWS, VoiceOver)</li>
+                <li><strong>Browser-Kompatibilität:</strong> Funktioniert in allen modernen Browsern</li>
+                <li><strong>Zeitlimits:</strong> Keine zeitlich begrenzten Inhalte, die nicht verlängert werden können</li>
+                <li><strong>Bewegungsoptionen:</strong> Unterstützung für prefers-reduced-motion für Nutzer, die Animationen deaktivieren möchten</li>
+                <li><strong>High Contrast Mode:</strong> Unterstützung für Hochkontrastmodus</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="testing-heading">
+            <h2 id="testing-heading">4. Barrierefreiheitstests</h2>
+            <p>Unsere Website wurde mit folgenden Tools und Methoden auf Barrierefreiheit getestet:</p>
+            
+            <h3>Automatisierte Tests</h3>
+            <ul>
+                <li><strong>WAVE (Web Accessibility Evaluation Tool):</strong> Automatische Prüfung auf häufige Barrierefreiheitsprobleme</li>
+                <li><strong>axe DevTools:</strong> Browser-Extension für detaillierte Accessibility-Audits</li>
+                <li><strong>Lighthouse:</strong> Chrome DevTools Accessibility Audit</li>
+                <li><strong>Validator.nu:</strong> HTML-Validierung für korrektes Markup</li>
+            </ul>
+
+            <h3>Manuelle Tests</h3>
+            <ul>
+                <li><strong>Tastaturnavigation:</strong> Vollständige Navigation ohne Maus</li>
+                <li><strong>Screenreader-Tests:</strong> NVDA (Windows), JAWS (Windows), VoiceOver (macOS/iOS)</li>
+                <li><strong>Zoom-Tests:</strong> Funktionalität bei 200% Vergrößerung</li>
+                <li><strong>Farbkontrast-Messungen:</strong> Mit Colour Contrast Analyser</li>
+            </ul>
+
+            <h3>Testdatum</h3>
+            <p><strong>Letzter vollständiger Barrierefreiheitstest:</strong> Januar 2026</p>
+        </section>
+
+        <section aria-labelledby="known-issues-heading">
+            <h2 id="known-issues-heading">5. Bekannte Einschränkungen</h2>
+            <p>Trotz unserer Bemühungen können einige Bereiche unserer Website Barrierefreiheitseinschränkungen aufweisen:</p>
+            
+            <h3>Bekannte Probleme</h3>
+            <ul>
+                <li><strong>Interaktive Karten:</strong> Die Kartenvisualisierung in der App kann für Screenreader-Nutzer eingeschränkt sein. Wir arbeiten an alternativen Text-basierten Darstellungen der Routeninformationen.</li>
+                <li><strong>PDF-Dateien:</strong> Einige ältere PDF-Dokumente (z.B. Rechnungen) sind möglicherweise nicht vollständig barrierefrei. Wir können diese auf Anfrage in zugänglichen Formaten bereitstellen.</li>
+            </ul>
+
+            <h3>Laufende Verbesserungen</h3>
+            <p>Wir arbeiten kontinuierlich an der Verbesserung der Barrierefreiheit und planen folgende Erweiterungen:</p>
+            <ul>
+                <li>Implementierung einer Vorlesefunktion für längere Texte</li>
+                <li>Erweiterte Anpassungsoptionen für visuelle Darstellung (Dark Mode, Schriftgrößen)</li>
+                <li>Verbesserte Sprachausgabe für Routenanweisungen</li>
+                <li>Gebärdensprach-Videos für zentrale Inhalte</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="assistive-heading">
+            <h2 id="assistive-heading">6. Kompatibilität mit assistiven Technologien</h2>
+            <p>Diese Website ist darauf ausgelegt, mit folgenden assistiven Technologien kompatibel zu sein:</p>
+            <ul>
+                <li><strong>Screenreader:</strong> NVDA, JAWS, VoiceOver, TalkBack</li>
+                <li><strong>Sprachsteuerung:</strong> Dragon NaturallySpeaking</li>
+                <li><strong>Bildschirmvergrößerung:</strong> ZoomText, Windows Magnifier, macOS Zoom</li>
+                <li><strong>Alternative Eingabegeräte:</strong> Switch-Steuerung, Eye-Tracking-Software</li>
+                <li><strong>Browser-Funktionen:</strong> Text-Only-Modus, High-Contrast-Modus, Reader-Modus</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="specifications-heading">
+            <h2 id="specifications-heading">7. Technische Spezifikationen</h2>
+            <p>Die Barrierefreiheit dieser Website basiert auf folgenden Technologien:</p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (mit progressiver Verbesserung - die Kernfunktionen sind auch ohne JavaScript verfügbar)</li>
+                <li>WAI-ARIA 1.2</li>
+            </ul>
+
+            <h3>Browser-Unterstützung</h3>
+            <p>Diese Website wurde getestet und funktioniert barrierefrei in:</p>
+            <ul>
+                <li>Chrome (aktuelle Version und eine Version zurück)</li>
+                <li>Firefox (aktuelle Version und eine Version zurück)</li>
+                <li>Safari (aktuelle Version und eine Version zurück)</li>
+                <li>Edge (aktuelle Version und eine Version zurück)</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="assessment-heading">
+            <h2 id="assessment-heading">8. Beurteilungsmethode</h2>
+            <p>easypathVienna GmbH hat die Barrierefreiheit von easypathvienna.at durch folgende Methoden beurteilt:</p>
+            <ul>
+                <li><strong>Selbstbewertung:</strong> Interne Prüfung durch unser Entwicklungsteam</li>
+                <li><strong>Externe Bewertung:</strong> Geplante Prüfung durch externe Barrierefreiheitsexperten (Q2 2026)</li>
+                <li><strong>Nutzerfeedback:</strong> Kontinuierliches Feedback von Nutzern mit Behinderungen</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="feedback-heading">
+            <h2 id="feedback-heading">9. Feedback und Kontakt</h2>
+            <p>Wir freuen uns über Ihr Feedback zur Barrierefreiheit unserer Website. Wenn Sie auf Barrieren stoßen oder Verbesserungsvorschläge haben, kontaktieren Sie uns bitte:</p>
+            
+            <div style="background: var(--background-alt); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                <h3>Kontakt für Barrierefreiheit</h3>
+                <p>
+                    <strong>E-Mail:</strong> <a href="mailto:barrierefreiheit@easypathvienna.at">barrierefreiheit@easypathvienna.at</a><br>
+                    <strong>Telefon:</strong> <a href="tel:+4312345678">+43 1 234 5678</a><br>
+                    <strong>Post:</strong> easypathVienna GmbH, Mariahilfer Straße 123, 1060 Wien, Österreich
+                </p>
+                <p><strong>Reaktionszeit:</strong> Wir bemühen uns, auf alle Barrierefreiheits-Anfragen innerhalb von 5 Werktagen zu antworten.</p>
+            </div>
+
+            <h3>Alternative Formate</h3>
+            <p>Wenn Sie Schwierigkeiten haben, auf Inhalte auf unserer Website zuzugreifen, können wir diese in alternativen Formaten bereitstellen:</p>
+            <ul>
+                <li>Großdruck</li>
+                <li>Leichte Sprache</li>
+                <li>Audio-Format</li>
+                <li>Barrierefreies PDF</li>
+            </ul>
+            <p>Bitte kontaktieren Sie uns mit Ihren spezifischen Anforderungen.</p>
+        </section>
+
+        <section aria-labelledby="enforcement-heading">
+            <h2 id="enforcement-heading">10. Durchsetzungsverfahren</h2>
+            <p>Wenn Sie mit unserer Reaktion auf Ihr Barrierefreiheits-Feedback nicht zufrieden sind, können Sie sich an folgende Stellen wenden:</p>
+            
+            <h3>Österreichische Überwachungsstelle</h3>
+            <p>
+                <strong>Österreichische Forschungsförderungsgesellschaft (FFG)</strong><br>
+                Sensengasse 1<br>
+                1090 Wien<br>
+                E-Mail: <a href="mailto:kontakt@ueberwachungsstelle.gv.at">kontakt@ueberwachungsstelle.gv.at</a><br>
+                Website: <a href="https://www.ueberwachungsstelle.gv.at" target="_blank" rel="noopener">www.ueberwachungsstelle.gv.at</a>
+            </p>
+
+            <h3>Europäische Kommission</h3>
+            <p>Sie können auch eine Beschwerde bei der Europäischen Kommission einreichen:</p>
+            <p>
+                <a href="https://ec.europa.eu/info/policies/justice-and-fundamental-rights/eu-citizenship/eu-pillar-social-rights/accessibility_de" target="_blank" rel="noopener">
+                    Barrierefreiheit in der EU
+                </a>
+            </p>
+        </section>
+
+        <section aria-labelledby="review-heading">
+            <h2 id="review-heading">11. Überprüfung und Aktualisierung</h2>
+            <p>Diese Barrierefreiheitserklärung wurde erstellt am: <strong>15. Januar 2026</strong></p>
+            <p>Die Erklärung wurde zuletzt überprüft am: <strong>15. Januar 2026</strong></p>
+            <p>Wir überprüfen und aktualisieren diese Erklärung regelmäßig, mindestens jedoch jährlich oder wenn wesentliche Änderungen an der Website vorgenommen werden.</p>
+        </section>
+
+        <section aria-labelledby="resources-heading">
+            <h2 id="resources-heading">12. Weitere Ressourcen</h2>
+            <p>Für weitere Informationen zur Web-Barrierefreiheit:</p>
+            <ul>
+                <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">W3C Web Accessibility Initiative (WAI)</a></li>
+                <li><a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener">WCAG 2.2 Quick Reference</a></li>
+                <li><a href="https://www.sozialministerium.at/Themen/Soziales/Menschen-mit-Behinderungen.html" target="_blank" rel="noopener">Österreichisches Sozialministerium - Menschen mit Behinderungen</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>easypathVienna</h3>
+                <p>Intelligente Fahrradrouten für Wien</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/about">Über uns</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/license">Lizenz</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rechtliches</h3>
+                <ul>
+                    <li><a href="/impressum">Impressum</a></li>
+                    <li><a href="/datenschutz">Datenschutz</a></li>
+                    <li><a href="/barrierefreiheit" aria-current="page">Barrierefreiheit</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <ul>
+                    <li><a href="/contact">Kontaktformular</a></li>
+                    <li><a href="mailto:info@easypathvienna.at">info@easypathvienna.at</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 easypathVienna GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
