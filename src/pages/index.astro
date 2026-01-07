@@ -195,5 +195,175 @@ const pageTitle = "easypathVienna - Intelligente Fahrradrouten für Wien";
             </div>
         </div>
     </footer>
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #212121; color: white; padding: 1.5rem; box-shadow: 0 -4px 12px rgba(0,0,0,0.3); z-index: 1000;" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <h2 id="cookie-banner-title" style="font-size: 1.25rem; margin-bottom: 0.5rem; color: white;">Cookie-Einstellungen</h2>
+        <p id="cookie-banner-desc" style="margin-bottom: 1rem; font-size: 0.95rem;">
+            Wir verwenden Cookies, um Ihnen die beste Erfahrung auf unserer Website zu bieten. Notwendige Cookies sind für die Funktionalität der Website erforderlich. Analyse-Cookies helfen uns, die Website zu verbessern.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            <button id="accept-all-cookies" style="background: #4CAF50; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 1rem;">
+                Alle akzeptieren
+            </button>
+            <button id="accept-necessary-cookies" style="background: transparent; color: white; border: 2px solid white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 1rem;">
+                Nur notwendige
+            </button>
+            <button id="customize-cookies" style="background: transparent; color: white; border: 2px solid white; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 1rem;">
+                Anpassen
+            </button>
+            <a href="/datenschutz" style="color: #4CAF50; text-decoration: underline; margin-left: auto;">Mehr Informationen</a>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Customization Modal -->
+<div id="cookie-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1001; overflow-y: auto;" role="dialog" aria-labelledby="cookie-modal-title" aria-modal="true">
+    <div style="max-width: 600px; margin: 2rem auto; background: white; border-radius: 8px; padding: 2rem;">
+        <h2 id="cookie-modal-title" style="margin-bottom: 1.5rem; color: #212121;">Cookie-Einstellungen anpassen</h2>
+        
+        <div style="margin-bottom: 1.5rem; padding: 1rem; background: #f5f5f5; border-radius: 4px;">
+            <label style="display: flex; align-items: flex-start; cursor: pointer;">
+                <input type="checkbox" checked disabled style="margin-right: 0.75rem; margin-top: 0.25rem;">
+                <div>
+                    <strong style="display: block; color: #212121;">Notwendige Cookies (erforderlich)</strong>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.875rem; color: #757575;">
+                        Diese Cookies sind für die Grundfunktionen der Website erforderlich (z.B. Session-Management, Cookie-Einwilligung).
+                    </p>
+                </div>
+            </label>
+        </div>
+
+        <div style="margin-bottom: 1.5rem; padding: 1rem; background: #f5f5f5; border-radius: 4px;">
+            <label style="display: flex; align-items: flex-start; cursor: pointer;">
+                <input type="checkbox" id="analytics-cookies" style="margin-right: 0.75rem; margin-top: 0.25rem;">
+                <div>
+                    <strong style="display: block; color: #212121;">Analyse-Cookies (optional)</strong>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.875rem; color: #757575;">
+                        Diese Cookies helfen uns zu verstehen, wie Besucher mit der Website interagieren (Google Analytics). IP-Adressen werden anonymisiert.
+                    </p>
+                </div>
+            </label>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+            <button id="close-modal" style="background: transparent; color: #2E7D32; border: 2px solid #2E7D32; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer;">
+                Abbrechen
+            </button>
+            <button id="save-preferences" style="background: #2E7D32; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer;">
+                Einstellungen speichern
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Banner JavaScript -->
+<script>
+    // Check if user has already made a cookie choice
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = `expires=${date.toUTCString()}`;
+        document.cookie = `${name}=${value};${expires};path=/;SameSite=Strict`;
+    }
+
+    // Show cookie banner if no consent exists
+    const cookieConsent = getCookie('cookie_consent');
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieModal = document.getElementById('cookie-modal');
+
+    if (!cookieConsent) {
+        cookieBanner.style.display = 'block';
+    }
+
+    // Accept all cookies
+    document.getElementById('accept-all-cookies').addEventListener('click', function() {
+        setCookie('cookie_consent', 'all', 365);
+        setCookie('analytics_consent', 'true', 365);
+        cookieBanner.style.display = 'none';
+        // Initialize Google Analytics here if needed
+        console.log('All cookies accepted');
+    });
+
+    // Accept only necessary cookies
+    document.getElementById('accept-necessary-cookies').addEventListener('click', function() {
+        setCookie('cookie_consent', 'necessary', 365);
+        setCookie('analytics_consent', 'false', 365);
+        cookieBanner.style.display = 'none';
+        console.log('Only necessary cookies accepted');
+    });
+
+    // Open customization modal
+    document.getElementById('customize-cookies').addEventListener('click', function() {
+        cookieModal.style.display = 'block';
+        cookieBanner.style.display = 'none';
+    });
+
+    // Close modal
+    document.getElementById('close-modal').addEventListener('click', function() {
+        cookieModal.style.display = 'none';
+        cookieBanner.style.display = 'block';
+    });
+
+    // Save custom preferences
+    document.getElementById('save-preferences').addEventListener('click', function() {
+        const analyticsChecked = document.getElementById('analytics-cookies').checked;
+        
+        setCookie('cookie_consent', analyticsChecked ? 'custom' : 'necessary', 365);
+        setCookie('analytics_consent', analyticsChecked ? 'true' : 'false', 365);
+        
+        cookieModal.style.display = 'none';
+        
+        if (analyticsChecked) {
+            // Initialize Google Analytics here if needed
+            console.log('Analytics cookies enabled');
+        }
+        
+        console.log('Custom preferences saved');
+    });
+
+    // Close modal when clicking outside
+    cookieModal.addEventListener('click', function(e) {
+        if (e.target === cookieModal) {
+            cookieModal.style.display = 'none';
+            cookieBanner.style.display = 'block';
+        }
+    });
+</script>
+
+<!-- Optional: Add this CSS to your global.css for better button hover effects -->
+<style>
+    #cookie-banner button:hover,
+    #cookie-modal button:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+        transition: all 0.2s ease;
+    }
+
+    #cookie-banner button:focus,
+    #cookie-modal button:focus {
+        outline: 2px solid #4CAF50;
+        outline-offset: 2px;
+    }
+
+    @media (max-width: 768px) {
+        #cookie-banner > .container > div {
+            flex-direction: column;
+        }
+        
+        #cookie-banner button {
+            width: 100%;
+        }
+        
+        #cookie-banner a {
+            margin-left: 0 !important;
+        }
+    }
+</style>
 </body>
 </html>
